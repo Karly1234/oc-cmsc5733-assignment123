@@ -24,14 +24,16 @@ int multofarray(std::vector <int> b){
 }
 
 int main() {
-    std::vector<int> vect;
-    vect.push_back(1);
-    vect.push_back(2);
-    vect.push_back(3);
-    vect.push_back(4);
-    vect.push_back(5);
 
-    std::cout<< sumofarray(vect) << '\n';
+    std::vector<int> vect;
+   std::cout<< "Please enter 5 numbers with spaces in between each element: "<< std::endl;
+   for(int i = 0; i < 5; i++){
+       int result=0;
+       std::cin>> result;
+    vect.push_back(result);
+   }
+
+    std::cout << sumofarray(vect) << '\n';
     std::cout << multofarray(vect);
 
     return 0;
