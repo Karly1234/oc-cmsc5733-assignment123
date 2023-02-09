@@ -12,6 +12,16 @@ for(int i=0; i < a.size(); i++ ){
 return sum;
 
 }
+int multofarray(std::vector <int> b){
+    int prod = 0;
+    for(int i = 0; i < b.size(); i++){
+        if(i==0){
+            prod = b[i];
+        }
+        prod= b[i]*prod;
+    }
+    return prod;
+}
 
 int main() {
     std::vector<int> vect;
@@ -21,7 +31,8 @@ int main() {
     vect.push_back(4);
     vect.push_back(5);
 
-    std::cout<< sumofarray(vect);
+    std::cout<< sumofarray(vect) << '\n';
+    std::cout << multofarray(vect);
 
     return 0;
 
