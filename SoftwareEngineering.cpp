@@ -22,6 +22,14 @@ int multofarray(std::vector <int> b){
     }
     return prod;
 }
+std::vector<int> reverse(std::vector <int> c){
+    std::vector<int> result;
+    for(int i = c.size()-1 ; i >=0 ; i--){
+        int j = c[i];
+        result.push_back(j);
+    }
+    return result;
+}
 
 int main() {
 
@@ -34,7 +42,15 @@ int main() {
    }
 
     std::cout << sumofarray(vect) << '\n';
-    std::cout << multofarray(vect);
+    std::cout << multofarray(vect) << '\n';
+
+    std::vector<int> reversed = reverse(vect);
+
+    for(int i =0; i < reversed.size();i++){
+        std::cout << reversed.at(i) <<' ';
+    }
+
+
 
     return 0;
 
